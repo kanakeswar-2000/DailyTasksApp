@@ -52,6 +52,7 @@ const Taskslist=()=>{
     }
     const onAddTask=(event)=>{
         event.preventDefault()
+        console.log(uuidv4())
         const newTask={
             id:uuidv4(),
             name,
@@ -113,7 +114,7 @@ const Taskslist=()=>{
                     <label htmlFor="taskStatus" className="label">Status</label> <br/>
                 <select onChange={onChangeStatus} value={status} id="taskStatus" className="task-input">
                         {taskStatusList.map(eachitem=>
-                            <option id={eachitem.id} value={eachitem.value} >{eachitem.displayText}</option>
+                            <option  value={eachitem.value} >{eachitem.displayText}</option>
                         )}
                 </select>
                 </div>
@@ -130,7 +131,7 @@ const Taskslist=()=>{
                     <label>Filter By Status</label>
                     <select onChange={onChangeActiveStatus} value={activeStatus}>
                         {taskStatusList.map(eachitem=>
-                            <option id={eachitem.id} value={eachitem.value} >{eachitem.displayText}</option>
+                            <option id={eachitem.id} key={eachitem.id} value={eachitem.value} >{eachitem.displayText}</option>
                         )}
                 </select>
                 </div>
@@ -143,7 +144,7 @@ const Taskslist=()=>{
                  
             </div> 
              
-            <div class="heading-container">
+            <div className="heading-container">
                 <h1>Daily Tasks </h1> 
                 <button type="button" className="save-button" onClick={onClickSaveBtn}>Save</button>
             </div> 
