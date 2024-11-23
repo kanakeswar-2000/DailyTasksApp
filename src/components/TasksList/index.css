@@ -1,0 +1,50 @@
+.form-tasks-container{
+    display:flex;
+    flex-direction:column;
+     
+}
+.form-container{
+     
+    align-self:center;
+    
+}
+.tasks-container{
+     list-style-type:none;
+}
+.each-input{
+    margin-bottom:20px;
+     
+}
+.label{
+    font-weight:bold;
+    font-size:20px;
+}
+.task-input{
+    width:50vw;
+    max-width:300px;
+}
+.task-description-input{
+    width:70vw;
+    max-width:600px;
+}
+.heading-container{
+    display:flex;
+    align-items:flex-start;
+    justify-content: space-around;
+}
+.save-button{
+    border:none;
+    width:100px;
+    height:30px;
+    padding:10px;
+    background-color: green;
+    color:white;
+    text-align:center;
+  
+}
+.add-task-btn{
+    background-color:blueviolet;
+    color:white;
+    padding:10px;
+    border:none;
+}
